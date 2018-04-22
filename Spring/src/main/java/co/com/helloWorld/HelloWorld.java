@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package co.com.helloWorld;
 
 public class HelloWorld {
 
