@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+      
+	<bean id="jugador1" class="co.com.soloxml.Jugador">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Wen Roonwy"></property>
+		<property name="equipo" ref="everton"></property>
+		<property name="camiseta" ref="camiseta1"></property>
+	</bean>
+	
+	<bean id="everton" class="co.com.soloxml.Everton"></bean>
+	<bean id="rm" class="co.com.soloxml.RealMadrid"></bean>
+	
+	<bean id="camiseta1" class="co.com.soloxml.Camiseta">
+		<property name="id" value="1"></property>
+		<property name="numero" value="10"></property>
+		<property name="marca" ref="marca1"></property>
+	</bean>
+	
+	<bean id="marca1" class="co.com.soloxml.Marca">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Adidas"></property>
+	</bean>
+
+</beans>
