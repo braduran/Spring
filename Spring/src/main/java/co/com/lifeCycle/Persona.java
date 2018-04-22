@@ -1,17 +1,25 @@
 package co.com.lifeCycle;
 
-public class Persona {
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Persona implements InitializingBean, DisposableBean{
 	
 	private int id;
 	private String nombre;
 	private String apodo;
 	private Pais pais;
 	
-	private void initBean() {
+	@Override
+	public void afterPropertiesSet() throws Exception {
 		System.out.println("Iniciando bean Persona...");
 	}
 	
-	private void destroyBean() {
+	@Override
+	public void destroy() throws Exception {
 		System.out.println("Bean Persona a punto de ser destruido...");
 	}
 	

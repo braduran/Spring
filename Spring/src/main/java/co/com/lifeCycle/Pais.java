@@ -1,15 +1,23 @@
 package co.com.lifeCycle;
 
-public class Pais {
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Pais implements InitializingBean, DisposableBean{
 	
 	private String nombre;
 
-	private void initBean() {
-		System.out.println("Iniciando bean Pais...");
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Iniciando bean Pais...");		
 	}
-	
-	private void destroyBean() {
-		System.out.println("Bean Pais a punto de ser destruido...");
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("Bean Pais a punto de ser destruido...");		
 	}
 	
 	public String getNombre() {
