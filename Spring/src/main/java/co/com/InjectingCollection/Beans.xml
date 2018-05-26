@@ -1,0 +1,46 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+      
+   <bean id="javaCollection" class="co.com.InjectingCollection.JavaCollection">
+   		<property name="list">
+   			<list>
+   				<value>India</value>
+   				<value>Pakistan</value>
+   				<value>Siria</value>
+   				<value>Uzbekistan</value>
+   			</list>
+   		</property>  
+   		
+   		<property name="set">
+   			<list>
+   				<value>Colombia</value>
+   				<value>Perú</value>
+   				<value>Brasil</value>
+   				<value>Chile</value>
+   			</list>
+   		</property>
+   		
+   		<property name="map">
+   			<map>
+   				<entry key="1" value="Zimbabue"></entry>
+   				<entry key="2" value="Ghana"></entry>
+   				<entry key="3" value="Camerún"></entry>
+   				<entry key="4" value="Senegal"></entry>
+   			</map>
+   		</property>
+   		
+   		<property name="properties">
+   			<props>
+   				<prop key="one">EE UU</prop>
+   				<prop key="two">Canada</prop>
+   				<prop key="three">Mexico</prop>
+   				<prop key="four">Puerto rico</prop>
+   			</props>
+   		</property>
+   </bean>
+
+</beans>
